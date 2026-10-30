@@ -18,9 +18,11 @@ The project aims to make Rwanda's national poverty statistics more accessible an
 
 ## Watch the Demo
 
-Watch our application demonstration, presented by Habibllah Ayodele and Noella Uwera.
+Watch our demonstration of Ubudehe Insight, presented by Habibllah Ayodele and Noella Uwera.
 
-[▶ Watch the Ubudehe Insight Demo](demo/Team%20Matrix%20Demo%20Video.mp4)
+**[▶ Watch the 3-minute application demo](https://drive.google.com/file/d/14S2stbO_r0ODzRglYfBf1-_CC1OrwLQW/view?usp=sharing)**
+
+[Download the demo video from GitHub](demo/Team%20Matrix%20Demo%20Video.mp4)
 
 ## 2. Problem Statement
 
