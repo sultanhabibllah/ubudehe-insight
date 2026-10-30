@@ -45,7 +45,7 @@ The application uses official data published by the **National Institute of Stat
 
 ### Dataset 1: EICV7 Poverty Profile
 
-**Original file:** `EICV7_Tables_Rwanda_Poverty_Profile.xlsx`
+**Original file:** [EICV7_Tables_Rwanda_Poverty_Profile.xlsx](data/EICV7_Tables_Rwanda_Poverty_Profile.xlsx)
 
 **Relevant table:** Table 0.1
 
@@ -58,7 +58,7 @@ Selected indicators:
 
 ### Dataset 2: EICV7 Multidimensional Poverty
 
-**Original file:** `Tables_and_Figures_EICV7_Multidimensional_Poverty_MPI.xlsx`
+**Original file:** [Tables_and_Figures_EICV7_Multidimensional_Poverty_MPI.xlsx](data/Tables_and_Figures_EICV7_Multidimensional_Poverty_MPI.xlsx)
 
 **Relevant table:** Table B.5
 
