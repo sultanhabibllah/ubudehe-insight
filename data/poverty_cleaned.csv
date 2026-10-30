@@ -1,0 +1,6 @@
+province,monetary_poverty,monetary_ci_lower,monetary_ci_upper,mpi_incidence,mpi_intensity,mpi_index
+City of Kigali,9.1,7.0,11.2,12.4,43.0,0.053
+Southern,34.7,32.7,36.7,35.2,45.0,0.158
+Western,37.4,35.0,39.8,33.5,44.6,0.149
+Northern,20.2,18.1,22.3,28.7,42.9,0.123
+Eastern,26.8,24.7,28.8,34.4,45.5,0.157

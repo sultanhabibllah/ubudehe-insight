@@ -1,0 +1,554 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+    --black: #171717;
+    --charcoal: #414141;
+    --muted: #737373;
+    --canvas: #FFFFFF;
+    --sidebar: #F1F0EE;
+    --soft: #F5F5F3;
+    --border: #E6E5E2;
+    --grey: #DCDCD9;
+}
+
+/* Global layout */
+
+html,
+body,
+.stApp {
+    font-family: 'DM Sans', Arial, sans-serif;
+    color: var(--black);
+}
+
+.stApp,
+[data-testid="stMain"],
+[data-testid="stAppViewContainer"] {
+    background: var(--canvas);
+}
+
+.stApp *,
+[data-testid="stSidebar"] * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+[data-testid="stHeader"] {
+    background: transparent !important;
+    height: 2.25rem;
+}
+
+[data-testid="stDecoration"] {
+    display: none !important;
+}
+
+.block-container {
+    max-width: 1500px;
+    padding: 1.5rem 2.3rem 3rem !important;
+}
+
+/* Sidebar */
+
+[data-testid="stSidebar"],
+[data-testid="stSidebar"] > div,
+[data-testid="stSidebarContent"] {
+    background: var(--sidebar) !important;
+}
+
+[data-testid="stSidebar"] {
+    border-right: 1px solid var(--border);
+}
+
+[data-testid="stSidebarContent"] {
+    padding: 1.4rem 1rem !important;
+}
+
+[data-testid="stSidebar"] p {
+    color: var(--black);
+    font-size: 13px;
+}
+
+[data-testid="stSidebar"] hr {
+    border-color: #DDDCDA;
+}
+
+/* Brand */
+
+.brand {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 1.6rem;
+}
+
+.brand-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 39px;
+    height: 39px;
+    border-radius: 9px;
+    background: var(--black);
+    color: white;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.brand-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--black);
+    letter-spacing: -0.04em;
+}
+
+.brand-subtitle {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 3px;
+}
+
+/* Actual navigation buttons */
+
+[data-testid="stSidebar"] [class*="st-key-nav_"] {
+    margin-bottom: 3px;
+}
+
+[data-testid="stSidebar"] [class*="st-key-nav_"] button {
+    width: 100% !important;
+    min-height: 40px !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    padding: 9px 13px !important;
+    border: 0 !important;
+    border-radius: 6px !important;
+    background: transparent !important;
+    color: #555555 !important;
+    font-family: 'DM Sans', Arial, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+}
+
+[data-testid="stSidebar"] [class*="st-key-nav_"] button p {
+    color: inherit !important;
+    font-size: 14px !important;
+}
+
+[data-testid="stSidebar"] [class*="st-key-nav_"] button:hover {
+    background: #E5E4E1 !important;
+    color: var(--black) !important;
+}
+
+[data-testid="stSidebar"] [class*="st-key-nav_"] button[kind="primary"] {
+    background: white !important;
+    color: var(--black) !important;
+    font-weight: 700 !important;
+}
+
+[data-testid="stSidebar"] [class*="st-key-nav_"] button[kind="primary"]:hover {
+    background: white !important;
+}
+
+[data-testid="stSidebar"] button:focus-visible {
+    outline: 2px solid var(--black);
+    outline-offset: 2px;
+}
+
+/* Typography */
+
+.page-heading {
+    margin-bottom: 28px;
+}
+
+.page-heading h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 30px;
+    line-height: 1.25;
+    font-weight: 700;
+    letter-spacing: -0.055em;
+    color: var(--black);
+    margin: 0 0 9px;
+}
+
+.page-heading p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--charcoal);
+    margin: 0;
+}
+
+.section-heading {
+    margin: 20px 0 15px;
+}
+
+.section-heading h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: var(--black);
+    margin: 0 0 6px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.55;
+}
+
+/* KPI cards */
+
+.kpi-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 23px 24px 21px;
+    min-height: 168px;
+}
+
+.kpi-label {
+    font-size: 14px;
+    color: var(--charcoal);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.kpi-value {
+    font-family: 'Space Mono', monospace;
+    color: var(--black);
+    font-size: clamp(32px, 2.8vw, 44px);
+    line-height: 1.12;
+    letter-spacing: -0.06em;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "zero" 1, "tnum" 1;
+    overflow-wrap: anywhere;
+    margin-bottom: 12px;
+}
+
+.kpi-detail {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+/* Regular words should never use the numeric font */
+
+.kpi-value:not(:has(*)) {
+    text-shadow: none;
+}
+
+/* Information panels */
+
+.info-panel {
+    padding: 22px 24px;
+    background: var(--soft);
+    border: 1px solid var(--border);
+    border-radius: 9px;
+}
+
+.info-title {
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.info-panel p {
+    color: var(--charcoal);
+    font-size: 14px;
+    line-height: 1.75;
+    margin: 0;
+}
+
+.featured-panel {
+    padding: 23px 24px;
+    background: var(--black);
+    border-radius: 10px;
+    color: white;
+}
+
+.featured-label {
+    font-size: 14px;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.featured-value {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 29px;
+    line-height: 1.2;
+    color: white;
+    letter-spacing: -0.04em;
+}
+
+.featured-panel p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: white;
+    margin: 11px 0 0;
+}
+
+/* Chart */
+
+[data-testid="stPlotlyChart"] {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    padding: 9px;
+}
+
+[data-testid="stPlotlyChart"] .modebar {
+    display: none !important;
+}
+
+/* White evidence tables */
+
+.table-scroll {
+    width: 100%;
+    overflow-x: auto;
+    margin: 12px 0 22px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: white;
+}
+
+.data-table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 650px;
+    background: white;
+    color: var(--black);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-variant-numeric: tabular-nums;
+}
+
+.data-table thead {
+    background: var(--soft);
+}
+
+.data-table th {
+    color: var(--charcoal);
+    font-weight: 700;
+    font-size: 13px;
+    text-align: left;
+    padding: 17px 18px;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+}
+
+.data-table td {
+    color: var(--black);
+    padding: 17px 18px;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+}
+
+.data-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.data-table tbody tr:hover {
+    background: #F9F9F8;
+}
+
+.data-table td:first-child {
+    font-weight: 600;
+}
+
+.data-table th:not(:first-child),
+.data-table td:not(:first-child) {
+    text-align: right;
+}
+
+/* Inputs */
+
+div[data-baseweb="select"] > div {
+    background: white !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 7px !important;
+}
+
+.stApp label {
+    font-size: 14px;
+    color: var(--black);
+}
+
+/* Download buttons */
+
+.stDownloadButton button {
+    background: var(--black) !important;
+    color: white !important;
+    border: 1px solid var(--black) !important;
+    border-radius: 6px !important;
+    padding: 10px 17px !important;
+    min-height: 42px;
+}
+
+.stDownloadButton button p {
+    color: white !important;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Captions */
+
+[data-testid="stCaptionContainer"] p {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    .block-container {
+        padding: 1rem 1rem 3rem !important;
+    }
+
+    .page-heading h1 {
+        font-size: 26px;
+    }
+
+    .kpi-card {
+        padding: 18px;
+        min-height: 140px;
+    }
+
+    .kpi-value {
+        font-size: 32px;
+    }
+}
+
+
+/* =========================================
+   SIDEBAR NAVIGATION REFINEMENT
+   ========================================= */
+
+/* Center the U monogram */
+
+.brand-mark {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    background: #171717;
+    border-radius: 9px;
+
+    color: #FFFFFF !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 23px !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    letter-spacing: -0.055em;
+    text-align: center;
+}
+
+/* Every navigation button */
+
+[data-testid="stSidebar"]
+[class*="st-key-nav_"] button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+
+    width: 100% !important;
+    min-height: 42px !important;
+
+    padding: 10px 12px !important;
+    gap: 12px !important;
+
+    text-align: left !important;
+}
+
+/* Override Streamlit's centered button content */
+
+[data-testid="stSidebar"]
+[class*="st-key-nav_"] button > div {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 12px !important;
+    width: 100% !important;
+}
+
+/* Labels */
+
+[data-testid="stSidebar"]
+[class*="st-key-nav_"] button p {
+    color: #555555 !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 1.3 !important;
+    text-align: left !important;
+    margin: 0 !important;
+}
+
+/* Filled Google Material icons */
+
+[data-testid="stSidebar"]
+[class*="st-key-nav_"] button
+[data-testid="stIconMaterial"] {
+    font-size: 20px !important;
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 20;
+    color: #5B5B5B !important;
+    flex-shrink: 0;
+}
+
+/* Selected item */
+
+[data-testid="stSidebar"]
+[class*="st-key-nav_"] button[kind="primary"] {
+    background: #FFFFFF !important;
+    color: #171717 !important;
+}
+
+[data-testid="stSidebar"]
+[class*="st-key-nav_"] button[kind="primary"] p {
+    color: #171717 !important;
+    font-weight: 700 !important;
+}
+
+[data-testid="stSidebar"]
+[class*="st-key-nav_"] button[kind="primary"]
+[data-testid="stIconMaterial"] {
+    color: #171717 !important;
+}
+
+/* Hover */
+
+[data-testid="stSidebar"]
+[class*="st-key-nav_"] button:hover {
+    background: #E5E4E1 !important;
+}
+
+[data-testid="stSidebar"]
+[class*="st-key-nav_"] button[kind="primary"]:hover {
+    background: #FFFFFF !important;
+}
+
+/* Align sidebar branding with main content heading */
+
+[data-testid="stSidebarContent"] {
+    padding-top: 0.35rem !important;
+}
+
+.brand {
+    margin-top: 0 !important;
+    margin-bottom: 1.4rem !important;
+}
