@@ -16,6 +16,12 @@ The platform transforms official poverty statistics from Rwanda's Seventh Integr
 
 The project aims to make Rwanda's national poverty statistics more accessible and actionable for researchers, government institutions, development partners, and civil society organizations.
 
+## Watch the Demo
+
+Watch our application demonstration, presented by Habibllah Ayodele and Noella Uwera.
+
+[▶ Watch the Ubudehe Insight Demo](demo/Team%20Matrix%20Demo%20Video.mp4)
+
 ## 2. Problem Statement
 
 Rwanda produces extensive statistical information through national surveys, including the EICV7 household living conditions survey.
