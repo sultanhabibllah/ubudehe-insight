@@ -1,7 +1,7 @@
 # Ubudehe Insight
 ### Rwanda Poverty Intelligence Platform
 
-**Prepared by:** Habibllah Ayodele and Noella Uwera  
+**Prepared by:** Habibllah Ayodele and Noella Uwera [Team Matrix] 
 **Competition:** NISR Big Data Hackathon 2026  
 **Track:** Financial Inclusion & Poverty Reduction  
 **Data Source:** NISR EICV7 (2023/24)
